@@ -43,7 +43,23 @@ public class DeckOfCardsGame {
         System.out.println("\nSequence of cards are below : ");
         for (int i = 1; i <= player; i++) {
             System.out.println("\nPlayer " + i + " Getting card.............");
+            toshuffle(cardsDeck);
         }
+    }
+    /*
+    Created a method to shuffle the cards
+    Shuffling the cards by using Math.random
+     */
+    public static void toshuffle(ArrayList<String> cardsDeck) {
+        System.out.println("shuffling the cards before Distribution");
+        ArrayList<String> temp = new ArrayList<String>();
+        while (!cardsDeck.isEmpty()) {
+            int loc = (int) (Math.random() * cardsDeck.size());
+            temp.add(cardsDeck.get(loc));
+            cardsDeck.remove(loc);
+        }
+        cardsDeck = temp;
+        toDisplay(cardsDeck);
     }
     //This Method Is used to Display the Deck Of Cards
     public static void toDisplay(ArrayList<String> cardsDeck) {
