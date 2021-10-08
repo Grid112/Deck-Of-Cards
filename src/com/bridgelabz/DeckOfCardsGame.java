@@ -38,6 +38,13 @@ public class DeckOfCardsGame {
             Sc.close();
         }
     }
+    //In this method we have defined the sequence of the player.
+    public void sequenceOfPlay(int player) {
+        System.out.println("\nSequence of cards are below : ");
+        for (int i = 1; i <= player; i++) {
+            System.out.println("\nPlayer " + i + " Getting card.............");
+        }
+    }
     //This Method Is used to Display the Deck Of Cards
     public static void toDisplay(ArrayList<String> cardsDeck) {
         System.out.println("\nCards in the Deck are:");
